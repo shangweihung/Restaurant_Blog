@@ -1,0 +1,131 @@
+<div class="container mt-5">
+  <div class="row mb-5 ml-1">
+    <div class="col-12 col-md-10 mx-auto">
+
+      {{!-- restaurant detail --}}
+      <div style="margin-bottom:1em; color: red;"><i> * 必填欄位 </i></div>
+      
+      <form action="/restaurants/{{{restaurant.id}}}/edit?_method=PUT" method="POST" class="mb-4">
+        <div class="form-group row">
+          <label for="name">
+            <span class="text-secondary">
+              餐廳名稱：
+            </span>
+            <span class="input-required">*</span>
+          </label>
+          <div class="col-10 ml-auto">
+            <input type="text" class="form-control" id="" placeholder="" value="{{{restaurant.name}}}" name="name">
+            <small id="" class="form-text text-muted"></small>
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label for="name">
+            <span class="text-secondary">
+              <i class="fas fa-utensils pr-2 mr-2"></i>
+              類別：
+            </span>
+            <span class="input-required">*</span>
+          </label>
+          <div class="col-10 ml-auto">
+            <input type="text" class="form-control" id="" placeholder="" value="{{{restaurant.category}}}"
+              name="category">
+            <small id="" class="form-text text-muted"></small>
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label for="name">
+            <span class="text-secondary">
+              <i class="fas fa-map-marker-alt pr-2 mr-2"></i>
+              地址：
+            </span>
+            <span class="input-required">*</span>
+          </label>
+          <div class="col-10 ml-auto">
+            <input type="text" class="form-control" id="" placeholder="" value="{{{restaurant.location}}}"
+              name="location">
+            <small id="" class="form-text text-muted"></small>
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label for="name">
+            <span class="text-secondary">
+              <i class="fas fa-map-marker-alt pr-2 mr-2"></i>
+              Google Map：
+            </span>
+          </label>
+          <div class="col-10 ml-auto">
+            <input type="text" class="form-control" id="" placeholder="" value="{{{restaurant.google_map}}}"
+              name="google_map">
+            <small id="" class="form-text text-muted"></small>
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label for="name">
+            <span class="text-secondary">
+              <i class="fas fa-mobile-alt pr-2 mr-2"></i>
+              電話：
+            </span>
+            <span class="input-required">*</span>
+          </label>
+          <div class="col-10 ml-auto">
+            <input type="text" class="form-control" id="" placeholder="" value="{{{restaurant.phone}}}" name="phone">
+            <small id="" class="form-text text-muted"></small>
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label for="name">
+            <span class="text-secondary">
+              <i class="fas fa-star fa-xs mr-2"></i>
+              評價：
+            </span>
+            <span class="input-required">*</span>
+          </label>
+          <div class="col-10 ml-auto">
+            <input type="text" class="form-control" id="" placeholder="" value="{{{restaurant.rating}}}" name="rating">
+            <small id="" class="form-text text-muted"></small>
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label for="name">
+            <span class="text-secondary">
+              <i class="fas fa-pencil-alt mr-2"></i>
+              餐廳描述：
+            </span>
+            <span class="input-required">*</span>
+          </label>
+          <div class="col-10 ml-auto">
+            <input type="text" class="form-control" id="" placeholder="" value="{{{restaurant.description}}}"
+              name="description">
+            <small id="" class="form-text text-muted"></small>
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label for="name">
+            <span class="text-secondary">
+              <i class="fas fa-camera-retro mr-2"></i>
+              圖片網址：
+            </span>
+            <span class="input-required"></span>
+          </label>
+          <div class="col-10 ml-auto">
+            <input type="text" class="form-control" id="" placeholder="" value="{{{restaurant.image}}}" name="image">
+            <small id="" class="form-text text-muted"></small>
+          </div>
+        </div>
+
+        <div class="button-group">
+          <button type="submit" class="btn btn-info px-5 mr-4">Save</button>
+          <a class="btn btn-dark" href="/restaurants/{{{restaurant.id}}}" role="button">Cancel</a>
+        </div>
+      </form>
+
+    </div>
+  </div>
+</div>

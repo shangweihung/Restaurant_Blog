@@ -1,0 +1,33 @@
+<div class="container mt-5">
+  <div class="row mb-5 ml-1">
+    <div class="col-12 col-md-10 mx-auto">
+
+      {{!-- restaurant input --}}
+      <form action="/restaurants" method="POST" class="form">
+        {{#each restaurantObj}}
+        <div class="form-group row">
+          <label for="{{@key}}">
+            <span class="text=secondary">
+              <i class="{{this.fontAwesome}}"></i>
+            </span>
+            {{this.title}}：
+            <span class="input-required">
+              {{this.tag}}
+            </span></label>
+          <div class="col-10 ml-auto">
+            <input type="text" class="form-control" id="" placeholder="" name="{{@key}}" value=""
+              {{#if this.required}}required{{/if}}>
+            <i id="" class="form-text text-muted">{{this.hint}}</i>
+          </div>
+        </div>
+        {{/each}}
+
+        {{!-- button for save and cancel --}}
+        <div class="button-group">
+          <button type="submit" class="btn btn-info px-5 mr-4">Save</button>
+          <a class="btn btn-dark" href="/" role="button">Cancel</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
